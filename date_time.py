@@ -2,19 +2,17 @@ from contextlib import contextmanager
 from datetime import datetime
 
 
-# using context manager
+# context manager
 @contextmanager
 def tag(some_output):
-    """
-    Just to make it easier to look at a result on terminal
-    """
+    """ Just to make it easier to look at a result on terminal """
     print(f'{some_output}')
     yield
     print(f'{some_output}')
 
 
 def main():
-    # printing date and time in default style
+    # print date and time in default style
     print(datetime.now())
 
 

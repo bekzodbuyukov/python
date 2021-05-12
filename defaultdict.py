@@ -1,24 +1,22 @@
-# collections module'idan defaultdict sub-class'ni import qilamiz
 from collections import defaultdict
 
 
-# mavjud bo'lmagan qiymatlar (value) uchun default qiymat
+# return default value for not existing keys
 def return_default_value():
     return "Value doesn't exist"
 
 
-# default dict asosida dictionary yaratamiz
+# create dict using defaultdict
 test_dict = defaultdict(return_default_value)
 
-# dictionary'ga key:value syntax'si asosida ma'lumot kiritamiz
+# add data to dict in key:value syntax
 test_dict["a"] = "Letter: a"
 test_dict["b"] = "Letter: b"
 
 if __name__ == "__main__":
-    # dictionary elementlarini chop etamiz
+    # print dict elements by keys
     print(test_dict["a"])
     print(test_dict["b"])
-    # dictionary'ning mavjud bo'lmagan elementini chop etamiz
+
+    # try to print value for not existing key
     print(test_dict["c"])
-    # natijada "Value doesn't exist" qiymatini olamiz
-    # Sinab ko'ring!
