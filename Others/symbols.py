@@ -1,5 +1,6 @@
 # written by: Kirill Mil
 # modified and commented by: Bekzod Buyukov
+# Yeah, there are too many comments. It's not good.
 
 from string import ascii_lowercase
 
