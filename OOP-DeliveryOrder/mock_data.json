@@ -1,0 +1,34 @@
+{
+  "orders": [
+      {
+        "distance": 12,
+        "product_name": "Coca Cola",
+        "delivery_date": "02.06.2021",
+        "car_number": "25 A 272 CA UZ"
+      },
+      {
+        "distance": 26,
+        "product_name": "Pepsi",
+        "delivery_date": "03.06.2021",
+        "car_number": "25 B 187 KK UZ"
+      },
+      {
+        "distance": 32,
+        "product_name": "Fanta",
+        "delivery_date": "30.05.2021",
+        "car_number": "25 L 356 PB UZ"
+      },
+      {
+        "distance": 18,
+        "product_name": "Sprite",
+        "delivery_date": "07.07.2021",
+        "car_number": "25 T 789 FM UZ"
+      },
+      {
+        "distance": 22,
+        "product_name": "RC Cola",
+        "delivery_date": "31.05.2021",
+        "car_number": "25 Q 659 GH UZ"
+      }
+  ]
+}
