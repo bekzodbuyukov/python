@@ -5,5 +5,5 @@ class Person:
         self.last_name = last_name
         self.age = age
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.age} y.o."
