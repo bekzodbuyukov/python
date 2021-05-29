@@ -1,4 +1,4 @@
-from core import SmartString
+from smart_string import SmartString
 
 
 def start_process():
