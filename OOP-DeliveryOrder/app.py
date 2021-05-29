@@ -1,4 +1,6 @@
 import json
+import sys
+
 from delivery_order import DeliveryOrder
 
 
@@ -7,8 +9,10 @@ def start_process(user_input: str) -> None:
         file = open(file="mock_data.json", mode="r")
     except FileNotFoundError:
         print("Error: File not found.")
+        sys.exit()
     except OSError as error:
         print(f"Error: Error {error.errno} {error.strerror}")
+        sys.exit()
     else:
         contents = json.loads(file.read())
         file.close()
