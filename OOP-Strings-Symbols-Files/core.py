@@ -28,6 +28,6 @@ class SmartString:
         # ]
         for sentence in self.file_content:
             if self.chosen_word in sentence:
-                self.special_sentences.append(sentence)
+                self.special_sentences.append(sentence.strip("\n"))
 
         return self.special_sentences
