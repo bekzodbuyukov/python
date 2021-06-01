@@ -99,7 +99,7 @@ class AddOrderWindow(tk.Toplevel):
         self.delivery_date_entry.delete(0, tk.END)
         self.car_number_entry.delete(0, tk.END)
 
-        self.successfully_added_label["text"] = "[!] Successfully added"
+        self.successfully_added_label["text"] = "[+] Successfully added"
         self.successfully_added_label["foreground"] = "green"
         self.successfully_added_label.grid({"row": 4, "column": 1,
                                             "padx": 10, "pady": 10})
