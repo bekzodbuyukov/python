@@ -10,16 +10,18 @@ class AddOrderWindow(tk.Toplevel):
         self.grid()
         self.text_font = font.Font(self, family="Poppins")
         # Labels and Buttons
-        self.distance_label = tk.Label(self)
-        self.distance_entry = tk.Entry(self)
-        self.product_name_label = tk.Label(self)
-        self.product_name_entry = tk.Entry(self)
-        self.delivery_date_label = tk.Label(self)
-        self.delivery_date_entry = tk.Entry(self)
-        self.car_number_label = tk.Label(self)
-        self.car_number_entry = tk.Entry(self)
-        self.save_button = tk.Button(self)
-        self.go_back_button = tk.Button(self)
+        self.distance_label = tk.Label(self, {"font": self.text_font})
+        self.distance_entry = tk.Entry(self, {"font": self.text_font})
+        self.product_name_label = tk.Label(self, {"font": self.text_font})
+        self.product_name_entry = tk.Entry(self, {"font": self.text_font})
+        self.delivery_date_label = tk.Label(self, {"font": self.text_font})
+        self.delivery_date_entry = tk.Entry(self, {"font": self.text_font})
+        self.car_number_label = tk.Label(self, {"font": self.text_font})
+        self.car_number_entry = tk.Entry(self, {"font": self.text_font})
+        self.save_button = tk.Button(self, {"font": self.text_font})
+        self.go_back_button = tk.Button(self, {"font": self.text_font})
+        self.order_status_label = tk.Label(self, {"font": self.text_font})
+        self.successfully_added_label = tk.Label(self, {"font": self.text_font})
         self.buttons = []
         # All About Order
         self.distance = None
@@ -27,8 +29,6 @@ class AddOrderWindow(tk.Toplevel):
         self.delivery_date = None
         self.car_number = None
         self.orders = []
-        self.order_status_label = tk.Label(self)
-        self.successfully_added_label = tk.Label(self)
         self.show_window()
 
     def show_window(self) -> None:
@@ -80,7 +80,7 @@ class AddOrderWindow(tk.Toplevel):
             button["activeforeground"] = "white"
             button.grid({"padx": 10, "pady": 10})
 
-    def save_order(self):
+    def save_order(self) -> None:
         self.distance = self.distance_entry.get()
         self.product_name = self.product_name_entry.get()
         self.delivery_date = self.delivery_date_entry.get()
@@ -103,5 +103,3 @@ class AddOrderWindow(tk.Toplevel):
         self.successfully_added_label["foreground"] = "green"
         self.successfully_added_label.grid({"row": 4, "column": 1,
                                             "padx": 10, "pady": 10})
-
-        print(new_order)
