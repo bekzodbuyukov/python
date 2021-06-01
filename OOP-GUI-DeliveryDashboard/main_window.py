@@ -2,6 +2,7 @@ import tkinter as tk
 import tkinter.font as font
 
 from window import Window
+from add_order_window import AddOrderWindow
 
 
 class MainWindow(Window):
@@ -16,8 +17,9 @@ class MainWindow(Window):
         self.grid()
         self.show_buttons()
 
-    def show_buttons(self):
+    def show_buttons(self) -> None:
         self.add_order_button["text"] = "Add Order"
+        self.add_order_button["command"] = AddOrderWindow
         self.add_order_button.grid({"row": 0, "column": 0})
         self.buttons.append(self.add_order_button)
 
@@ -42,7 +44,7 @@ class MainWindow(Window):
             button["activeforeground"] = "white"
             button.grid({"padx": 10, "pady": 10})
 
-    def show_about_window(self):
+    def show_about_window(self) -> None:
         about_window = tk.Toplevel()
         about_window.grid()
 
@@ -57,4 +59,4 @@ class MainWindow(Window):
         go_back_button["font"] = self.text_font
         go_back_button["activebackground"] = "black"
         go_back_button["activeforeground"] = "white"
-        go_back_button.grid({"row": 1, "padx": 10, "pady": 10})
+        go_back_button.grid({"row": 1, "column": 0, "padx": 10, "pady": 10})
