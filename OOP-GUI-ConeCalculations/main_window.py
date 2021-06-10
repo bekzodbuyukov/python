@@ -1,4 +1,4 @@
-from tkinter import Tk, Frame, Menu
+from tkinter import Frame, Menu
 
 
 class MainWindow(Frame):
@@ -17,4 +17,3 @@ class MainWindow(Frame):
 
     def exit(self):
         self.quit()
-
